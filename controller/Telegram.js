@@ -7,7 +7,14 @@ const bot = new Telegram(MY_TOKEN, { polling: true });
 const { axiosInstance } = require("./lib/axios");
 
 function sendMessage(chatId, messageText) {
-    bot.sendMessage(chatId, messageText);
+    if (messageObj && messageObj.chat && messageObj.chat.id) 
+    {
+        bot.sendMessage(chatId, messageText);
+    }
+    else
+    {
+        console.error("Invalid message object:", messageObj);
+    }
 }
 
 function sendImage(messageObj, imageUrl) {
