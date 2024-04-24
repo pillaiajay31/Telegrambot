@@ -10,9 +10,9 @@ function sendMessage(chatId, messageText) {
     bot.sendMessage(chatId, messageText);
 }
 
-function sendImage(messageObj, imageUrl) {
+async function sendImage(messageObj, imageUrl) {
     return axiosInstance.post("sendPhoto", {
-        chat_id: messageObj.chat.id,
+        chat_id: await messageObj.chat.id,
         photo: imageUrl,
     });
 }
