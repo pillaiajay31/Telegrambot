@@ -11,8 +11,12 @@ function sendMessage(chatId, messageText) {
 }
 
 async function sendImage(messageObj, imageUrl) {
+    if (!messageObj || !messageObj.chat || !messageObj.chat.id) {
+        throw new Error("Invalid message object");
+    }
+
     return axiosInstance.post("sendPhoto", {
-        chat_id: await messageObj.chat.id,
+        chat_id: messageObj.chat.id,
         photo: imageUrl,
     });
 }
