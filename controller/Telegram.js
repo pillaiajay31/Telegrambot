@@ -88,7 +88,7 @@ async function  handleMessage(messageObj) {
                 break;
             case "aboutme":
                 sendMessage(
-                    messageObj.chat.id, "~I'm Ajay Pillai, a B.Tech CSE student at Parul University\n~I'm passionate about technology and love learning new things.\n~I've completed internships as a:\n~Software Developer (Dec 2023 - Current), at iTechnoSol Inc\n~Backend Registration at TiEcon Vadodara (15 days Internship),and\n~Admin Executive at Parul University (Dec 2021 - April 2022)."
+                    messageObj.chat.id, "~I'm Ajay Pillai, a B.Tech CSE student at Parul University\n~I'm passionate about technology and love learning new things.\n~I've completed internships as a:\n~Software Developer (May 2023 - Current), at iTechnoSol Inc\n~Backend Registration at TiEcon Vadodara (15 days Internship),and\n~Admin Executive at Parul University (Dec 2021 - April 2022)."
                 );
                 break;
             case "randommemes":
